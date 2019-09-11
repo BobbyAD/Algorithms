@@ -9,7 +9,7 @@ def recipe_batches(recipe, ingredients):
             if ingredients[key] // recipe[key] < max_batches or max_batches == -1:
                 max_batches = ingredients[key] // recipe[key]
         else:
-            max_batches = 0
+            return 0
     return max_batches
 
 
