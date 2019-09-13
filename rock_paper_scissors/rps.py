@@ -23,6 +23,7 @@ def rock_paper_scissors(n):
         options = [['rock'], ['paper'], ['scissors']]
 
         if num > 0:
+            #Multiplies the list in the right order, 2nd rec =  [[r], [r], [p], [p], [s], [s]]
             new_list = [l[x//3] for x in range(len(l)*3)]
             # print(f" num: {num},\n list: {l},\n new_list: {new_list} ")
             for i in range(0, len(new_list)):
@@ -37,8 +38,6 @@ def rock_paper_scissors(n):
         return [[]]
     else:
         return returned_list
-
-print(rock_paper_scissors(4))
 
 
 if __name__ == "__main__":
