@@ -23,7 +23,8 @@ def rock_paper_scissors(n):
         options = [['rock'], ['paper'], ['scissors']]
 
         if num > 0:
-            new_list = [l[x//3] for x in range(9)]
+            new_list = [l[x//3] for x in range(len(l)*3)]
+            # print(f" num: {num},\n list: {l},\n new_list: {new_list} ")
             for i in range(0, len(new_list)):
                 new_list[i] = new_list[i] + options[i%3]
             return(recurs(num-1, new_list))
@@ -32,7 +33,10 @@ def rock_paper_scissors(n):
 
     returned_list = recurs(n-1, [['rock'], ['paper'], ['scissors']])
 
-    return returned_list
+    if n == 0:
+        return [[]]
+    else:
+        return returned_list
 
 print(rock_paper_scissors(4))
 
