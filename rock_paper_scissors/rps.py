@@ -15,7 +15,6 @@ import sys
 #27
 #
 # 3^n possibilities
-# need cache, but how?
 
 def rock_paper_scissors(n):
 
